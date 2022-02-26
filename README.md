@@ -1,2 +1,6 @@
-# voidsploit
-a gui exploit for fellow road blocks script kiddies (wip)
+# voidsploit BETA
+
+a epic gui exploit for fellow script kiddies
+(still wip, lots of bugs 🗿)
+
+dont skid or demise and despair
