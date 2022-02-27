@@ -5,8 +5,8 @@ a epic gui exploit for fellow script kiddies
 
 dont skid or demise and despair
 
-# code
+# loadstring
 
 ```
-load scr54ety
+loadstring(game:HttpGet("https://raw.githubusercontent.com/ncax/voidsploit/main/main.lua"))();
 ```
