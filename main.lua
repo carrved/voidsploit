@@ -25,6 +25,8 @@ local PlrTxtBox = Instance.new("TextBox")
 local UIAspectRatioConstraint_7 = Instance.new("UIAspectRatioConstraint")
 local TpToPlrBtn = Instance.new("TextButton")
 local UIAspectRatioConstraint_8 = Instance.new("UIAspectRatioConstraint")
+local RejoinButton = Instance.new("TextButton")
+local UIAspectRatioConstraint_9 = Instance.new("UIAspectRatioConstraint")
 local Frame_2 = Instance.new("ImageLabel")
 local TextLabel_2 = Instance.new("TextLabel")
 local TextLabel_3 = Instance.new("TextLabel")
@@ -202,6 +204,20 @@ TpToPlrBtn.TextSize = 14.000
 UIAspectRatioConstraint_8.Parent = TpToPlrBtn
 UIAspectRatioConstraint_8.AspectRatio = 3.139
 
+RejoinButton.Name = "RejoinButton"
+RejoinButton.Parent = Roundify
+RejoinButton.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+RejoinButton.BackgroundTransparency = 0.500
+RejoinButton.Position = UDim2.new(0.285143554, 0, 0.173194453, 0)
+RejoinButton.Size = UDim2.new(0.231357589, 0, 0.0954551548, 0)
+RejoinButton.Font = Enum.Font.Code
+RejoinButton.Text = "rejoin"
+RejoinButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+RejoinButton.TextSize = 14.000
+
+UIAspectRatioConstraint_9.Parent = RejoinButton
+UIAspectRatioConstraint_9.AspectRatio = 3.139
+
 Frame_2.Name = "Frame"
 Frame_2.Parent = Main
 Frame_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -262,7 +278,7 @@ TextButton.TextSize = 24.000
 
 -- Scripts:
 
-local function JJHDIID_fake_script() -- Roundify.Handler 
+local function OJGE_fake_script() -- Roundify.Handler 
 	local script = Instance.new('LocalScript', Roundify)
 
 	wait(1)
@@ -288,11 +304,12 @@ local function JJHDIID_fake_script() -- Roundify.Handler
 	local powerbtn = script.Parent:WaitForChild("JumpHeightButton")
 	local powertxtbox = script.Parent:WaitForChild("PowerTxtBox")
 	local speedtxtbox = script.Parent:WaitForChild("SpeedTxtBox")
+	local plrtxtbox = script.Parent:WaitForChild("PlrTxtBox")
 	local killbtn = script.Parent:WaitForChild("KillScript")
 	local godbtn = script.Parent:WaitForChild("GodButton")
 	local sitbtn = script.Parent:WaitForChild("SitButton")
 	local tpplrbtn = script.Parent:WaitForChild("TpToPlrBtn")
-	
+	local rjbtn = script.Parent:WaitForChild("RejoinButton")
 	--//
 	-- FUNCTIONS (button clicks)
 	--//
@@ -317,12 +334,10 @@ local function JJHDIID_fake_script() -- Roundify.Handler
 		print("Godded, health set to", Humanoid.MaxHealth, "!")
 	end
 	
-	function noclip()
-		-- wip
-	end
-	
 	function rejoin()
-		game:GetService("TeleportService"):Teleport(000, plr)
+		local ts = game:GetService("TeleportService")
+		local p = game:GetService("Players").LocalPlayer
+		ts:Teleport(game.PlaceId, p)
 	end
 	
 	function kill()
@@ -341,10 +356,10 @@ local function JJHDIID_fake_script() -- Roundify.Handler
 	
 	function tptoplr()
 		game:GetService("UserInputService").InputBegan:connect(function(key)
-			if key.KeyCode == Enum.KeyCode.T then --Replace E with the key you would like to be pressed
-				local ooooooof = TextBox.Text
+			if key.KeyCode == Enum.KeyCode.E then --Replace E with the key you would like to be pressed
+				local ooooooof = plrtxtbox.Text
 				local plr1 = game.Players.LocalPlayer.Character
-				local plr2 = script.Parent.PlrTxtBox.Text
+				local plr2 = game.Workspace:FindFirstChild(ooooooof)
 				plr1.HumanoidRootPart.CFrame = plr2.HumanoidRootPart.CFrame * CFrame.new(0,2,0)
 			end
 		end)
@@ -385,8 +400,8 @@ local function JJHDIID_fake_script() -- Roundify.Handler
 		Text = "loaded!";
 	})
 end
-coroutine.wrap(JJHDIID_fake_script)()
-local function GQNSYLF_fake_script() -- Frame.Draggable 
+coroutine.wrap(OJGE_fake_script)()
+local function REMKLE_fake_script() -- Frame.Draggable 
 	local script = Instance.new('LocalScript', Frame)
 
 	--Not made by me, check out this video: https://www.youtube.com/watch?v=z25nyNBG7Js&t=22s
@@ -429,8 +444,8 @@ local function GQNSYLF_fake_script() -- Frame.Draggable
 	end)
 	
 end
-coroutine.wrap(GQNSYLF_fake_script)()
-local function OVUC_fake_script() -- Frame_2.LocalScript 
+coroutine.wrap(REMKLE_fake_script)()
+local function ESZKON_fake_script() -- Frame_2.LocalScript 
 	local script = Instance.new('LocalScript', Frame_2)
 
 	local closebtn = script.Parent.TextButton
@@ -439,8 +454,8 @@ local function OVUC_fake_script() -- Frame_2.LocalScript
 		script.Parent:Destroy()
 	end)
 end
-coroutine.wrap(OVUC_fake_script)()
-local function UJEZ_fake_script() -- Frame_2.Draggable 
+coroutine.wrap(ESZKON_fake_script)()
+local function LDBQF_fake_script() -- Frame_2.Draggable 
 	local script = Instance.new('LocalScript', Frame_2)
 
 	--Not made by me, check out this video: https://www.youtube.com/watch?v=z25nyNBG7Js&t=22s
@@ -483,5 +498,5 @@ local function UJEZ_fake_script() -- Frame_2.Draggable
 	end)
 	
 end
-coroutine.wrap(UJEZ_fake_script)()
+coroutine.wrap(LDBQF_fake_script)()
 
