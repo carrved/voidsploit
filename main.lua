@@ -1,110 +1,302 @@
--- script made with gui to lua by frstee
+-- made with gui to lua by frstee
 
--- MADE BY z4xi#7679
--- no skid >:(
+-- MADE WITH z4xi#7679 and YTEtcetera#6526
+-- no skid or death and demise and despair
 
 -- Instances:
 
-local ScreenGui = Instance.new("ScreenGui")
-local Frame = Instance.new("ImageLabel")
-local TextLabel = Instance.new("TextLabel")
-local TextLabel_2 = Instance.new("TextLabel")
+local Main = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local Roundify = Instance.new("ImageLabel")
+local UIGradient = Instance.new("UIGradient")
 local FlyButton = Instance.new("TextButton")
+local UIAspectRatioConstraint = Instance.new("UIAspectRatioConstraint")
 local SpeedButton = Instance.new("TextButton")
-local TextBox = Instance.new("TextBox")
+local UIAspectRatioConstraint_2 = Instance.new("UIAspectRatioConstraint")
+local NoClipButton = Instance.new("TextButton")
+local UIAspectRatioConstraint_3 = Instance.new("UIAspectRatioConstraint")
+local SpeedTxtBox = Instance.new("TextBox")
+local UIAspectRatioConstraint_4 = Instance.new("UIAspectRatioConstraint")
+local TextLabel = Instance.new("TextLabel")
+local AimbotButton = Instance.new("TextButton")
+local UIAspectRatioConstraint_5 = Instance.new("UIAspectRatioConstraint")
+local GodButton = Instance.new("TextButton")
+local UIAspectRatioConstraint_6 = Instance.new("UIAspectRatioConstraint")
+local ESPButton = Instance.new("TextButton")
+local UIAspectRatioConstraint_7 = Instance.new("UIAspectRatioConstraint")
+local JumpPowerButton = Instance.new("TextButton")
+local UIAspectRatioConstraint_8 = Instance.new("UIAspectRatioConstraint")
+local PowerTxtBox = Instance.new("TextBox")
+local UIAspectRatioConstraint_9 = Instance.new("UIAspectRatioConstraint")
+local RejoinButton = Instance.new("TextButton")
+local UIAspectRatioConstraint_10 = Instance.new("UIAspectRatioConstraint")
+local KillScript = Instance.new("TextButton")
 local Frame_2 = Instance.new("ImageLabel")
+local TextLabel_2 = Instance.new("TextLabel")
+local TextLabel_3 = Instance.new("TextLabel")
+local TextLabel_4 = Instance.new("TextLabel")
+local TextButton = Instance.new("TextButton")
 
 --Properties:
 
-ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+Main.Name = "Main"
+Main.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 
-Frame.Name = "Frame"
-Frame.Parent = ScreenGui
+Frame.Parent = Main
 Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Frame.BackgroundTransparency = 1.000
-Frame.BorderColor3 = Color3.fromRGB(27, 42, 53)
-Frame.Position = UDim2.new(0.642045438, 0, 0.509212732, 0)
-Frame.Size = UDim2.new(0, 430, 0, 287)
-Frame.Image = "rbxassetid://3570695787"
-Frame.ImageColor3 = Color3.fromRGB(27, 42, 53)
-Frame.ScaleType = Enum.ScaleType.Slice
-Frame.SliceCenter = Rect.new(100, 100, 100, 100)
-Frame.SliceScale = 0.120
+Frame.BorderSizePixel = 0
+Frame.Position = UDim2.new(0.616883099, 0, 0.510887802, 0)
+Frame.Size = UDim2.new(0, 451, 0, 284)
 
-TextLabel.Parent = Frame
-TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel.BackgroundTransparency = 1.000
-TextLabel.Position = UDim2.new(-0.0534883738, 0, 0.895470381, 0)
-TextLabel.Size = UDim2.new(0, 200, 0, 30)
-TextLabel.Font = Enum.Font.Code
-TextLabel.Text = "voidsploit beta"
-TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel.TextSize = 18.000
-TextLabel.TextWrapped = true
+Roundify.Name = "Roundify"
+Roundify.Parent = Frame
+Roundify.AnchorPoint = Vector2.new(0.5, 0.5)
+Roundify.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Roundify.BackgroundTransparency = 1.000
+Roundify.Position = UDim2.new(0.5, 0, 0.457894713, 0)
+Roundify.Size = UDim2.new(1, 24, 1, 24)
+Roundify.Image = "rbxassetid://3570695787"
+Roundify.ScaleType = Enum.ScaleType.Slice
+Roundify.SliceCenter = Rect.new(100, 100, 100, 100)
+Roundify.SliceScale = 0.120
 
-TextLabel_2.Parent = Frame
-TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_2.BackgroundTransparency = 1.000
-TextLabel_2.Position = UDim2.new(0.646511674, 0, 0.895470381, 0)
-TextLabel_2.Size = UDim2.new(0, 200, 0, 30)
-TextLabel_2.Font = Enum.Font.Code
-TextLabel_2.Text = "z4xi#7679"
-TextLabel_2.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_2.TextSize = 18.000
-TextLabel_2.TextWrapped = true
+UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(170, 85, 255)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(170, 170, 255))}
+UIGradient.Parent = Roundify
 
 FlyButton.Name = "FlyButton"
-FlyButton.Parent = ScreenGui
+FlyButton.Parent = Roundify
 FlyButton.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 FlyButton.BackgroundTransparency = 0.500
-FlyButton.Position = UDim2.new(0.653409064, 0, 0.524288118, 0)
-FlyButton.Size = UDim2.new(0, 113, 0, 36)
+FlyButton.Position = UDim2.new(0.0367225073, 0, 0.0400775783, 0)
+FlyButton.Size = UDim2.new(0.231357589, 0, 0.0954551548, 0)
 FlyButton.Font = Enum.Font.Code
 FlyButton.Text = "fly"
 FlyButton.TextColor3 = Color3.fromRGB(255, 255, 255)
 FlyButton.TextSize = 14.000
 
+UIAspectRatioConstraint.Parent = FlyButton
+UIAspectRatioConstraint.AspectRatio = 3.139
+
 SpeedButton.Name = "SpeedButton"
-SpeedButton.Parent = ScreenGui
+SpeedButton.Parent = Roundify
 SpeedButton.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 SpeedButton.BackgroundTransparency = 0.500
-SpeedButton.Position = UDim2.new(0.761363626, 0, 0.524288118, 0)
-SpeedButton.Size = UDim2.new(0, 113, 0, 36)
+SpeedButton.Position = UDim2.new(0.286343783, 0, 0.0400775783, 0)
+SpeedButton.Size = UDim2.new(0.231357589, 0, 0.0954551548, 0)
 SpeedButton.Font = Enum.Font.Code
 SpeedButton.Text = "speed"
 SpeedButton.TextColor3 = Color3.fromRGB(255, 255, 255)
 SpeedButton.TextSize = 14.000
 
-TextBox.Parent = ScreenGui
-TextBox.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-TextBox.BackgroundTransparency = 0.500
-TextBox.Position = UDim2.new(0.650162339, 0, 0.882747054, 0)
-TextBox.Size = UDim2.new(0, 134, 0, 27)
-TextBox.Font = Enum.Font.Code
-TextBox.PlaceholderText = "enter speed num here"
-TextBox.Text = ""
-TextBox.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextBox.TextScaled = true
-TextBox.TextSize = 14.000
-TextBox.TextWrapped = true
+UIAspectRatioConstraint_2.Parent = SpeedButton
+UIAspectRatioConstraint_2.AspectRatio = 3.139
+
+NoClipButton.Name = "NoClipButton"
+NoClipButton.Parent = Roundify
+NoClipButton.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+NoClipButton.BackgroundTransparency = 0.500
+NoClipButton.Position = UDim2.new(0.530651271, 0, 0.0400775783, 0)
+NoClipButton.Size = UDim2.new(0.231357589, 0, 0.0954551548, 0)
+NoClipButton.Font = Enum.Font.Code
+NoClipButton.Text = "noclip/clip"
+NoClipButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+NoClipButton.TextSize = 14.000
+
+UIAspectRatioConstraint_3.Parent = NoClipButton
+UIAspectRatioConstraint_3.AspectRatio = 3.139
+
+SpeedTxtBox.Name = "SpeedTxtBox"
+SpeedTxtBox.Parent = Roundify
+SpeedTxtBox.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+SpeedTxtBox.BackgroundTransparency = 0.500
+SpeedTxtBox.Position = UDim2.new(0.555968165, 0, 0.888870597, 0)
+SpeedTxtBox.Size = UDim2.new(0.274353266, 0, 0.0715913698, 0)
+SpeedTxtBox.Font = Enum.Font.Code
+SpeedTxtBox.PlaceholderText = "enter speed num here"
+SpeedTxtBox.Text = ""
+SpeedTxtBox.TextColor3 = Color3.fromRGB(0, 0, 0)
+SpeedTxtBox.TextScaled = true
+SpeedTxtBox.TextSize = 14.000
+SpeedTxtBox.TextWrapped = true
+
+UIAspectRatioConstraint_4.Parent = SpeedTxtBox
+UIAspectRatioConstraint_4.AspectRatio = 4.963
+
+TextLabel.Parent = Roundify
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.Position = UDim2.new(0.0262008738, 0, 0.883495152, 0)
+TextLabel.Size = UDim2.new(0, 122, 0, 27)
+TextLabel.Font = Enum.Font.Code
+TextLabel.Text = "voidsploit v0.1"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14.000
+TextLabel.TextWrapped = true
+
+AimbotButton.Name = "AimbotButton"
+AimbotButton.Parent = Roundify
+AimbotButton.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+AimbotButton.BackgroundTransparency = 0.500
+AimbotButton.Position = UDim2.new(0.0367225073, 0, 0.214834869, 0)
+AimbotButton.Size = UDim2.new(0.231357589, 0, 0.0954551548, 0)
+AimbotButton.Font = Enum.Font.Code
+AimbotButton.Text = "aimbot"
+AimbotButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+AimbotButton.TextSize = 14.000
+
+UIAspectRatioConstraint_5.Parent = AimbotButton
+UIAspectRatioConstraint_5.AspectRatio = 3.139
+
+GodButton.Name = "GodButton"
+GodButton.Parent = Roundify
+GodButton.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+GodButton.BackgroundTransparency = 0.500
+GodButton.Position = UDim2.new(0.285630792, 0, 0.214834869, 0)
+GodButton.Size = UDim2.new(0.231357589, 0, 0.0954551548, 0)
+GodButton.Font = Enum.Font.Code
+GodButton.Text = "god"
+GodButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+GodButton.TextSize = 14.000
+
+UIAspectRatioConstraint_6.Parent = GodButton
+UIAspectRatioConstraint_6.AspectRatio = 3.139
+
+ESPButton.Name = "ESPButton"
+ESPButton.Parent = Roundify
+ESPButton.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ESPButton.BackgroundTransparency = 0.500
+ESPButton.Position = UDim2.new(0.532355726, 0, 0.214834869, 0)
+ESPButton.Size = UDim2.new(0.231357589, 0, 0.0954551548, 0)
+ESPButton.Font = Enum.Font.Code
+ESPButton.Text = "ESP"
+ESPButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+ESPButton.TextSize = 14.000
+
+UIAspectRatioConstraint_7.Parent = ESPButton
+UIAspectRatioConstraint_7.AspectRatio = 3.139
+
+JumpPowerButton.Name = "JumpPowerButton"
+JumpPowerButton.Parent = Roundify
+JumpPowerButton.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+JumpPowerButton.BackgroundTransparency = 0.500
+JumpPowerButton.Position = UDim2.new(0.770346999, 0, 0.040077582, 0)
+JumpPowerButton.Size = UDim2.new(0.231357589, 0, 0.0954551548, 0)
+JumpPowerButton.Font = Enum.Font.Code
+JumpPowerButton.Text = ""
+JumpPowerButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+JumpPowerButton.TextSize = 14.000
+
+UIAspectRatioConstraint_8.Parent = JumpPowerButton
+UIAspectRatioConstraint_8.AspectRatio = 3.139
+
+PowerTxtBox.Name = "PowerTxtBox"
+PowerTxtBox.Parent = Roundify
+PowerTxtBox.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+PowerTxtBox.BackgroundTransparency = 0.500
+PowerTxtBox.Position = UDim2.new(0.300509632, 0, 0.888870597, 0)
+PowerTxtBox.Size = UDim2.new(0.274353266, 0, 0.0715913698, 0)
+PowerTxtBox.Font = Enum.Font.Code
+PowerTxtBox.PlaceholderText = "enter power num here"
+PowerTxtBox.Text = ""
+PowerTxtBox.TextColor3 = Color3.fromRGB(0, 0, 0)
+PowerTxtBox.TextScaled = true
+PowerTxtBox.TextSize = 14.000
+PowerTxtBox.TextWrapped = true
+
+UIAspectRatioConstraint_9.Parent = PowerTxtBox
+UIAspectRatioConstraint_9.AspectRatio = 4.963
+
+RejoinButton.Name = "RejoinButton"
+RejoinButton.Parent = Roundify
+RejoinButton.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+RejoinButton.BackgroundTransparency = 0.500
+RejoinButton.Position = UDim2.new(0.77034682, 0, 0.214834854, 0)
+RejoinButton.Size = UDim2.new(0.202147603, 0, 0.0953405127, 0)
+RejoinButton.Font = Enum.Font.Code
+RejoinButton.Text = "rejoin"
+RejoinButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+RejoinButton.TextSize = 14.000
+
+UIAspectRatioConstraint_10.Parent = RejoinButton
+UIAspectRatioConstraint_10.AspectRatio = 3.139
+
+KillScript.Name = "KillScript"
+KillScript.Parent = Roundify
+KillScript.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+KillScript.BackgroundTransparency = 1.000
+KillScript.Position = UDim2.new(0.910663247, 0, 0.881812274, 0)
+KillScript.Size = UDim2.new(0, 40, 0, 39)
+KillScript.Font = Enum.Font.SourceSans
+KillScript.Text = "X"
+KillScript.TextColor3 = Color3.fromRGB(255, 0, 0)
+KillScript.TextSize = 24.000
 
 Frame_2.Name = "Frame"
-Frame_2.Parent = ScreenGui
+Frame_2.Parent = Main
 Frame_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Frame_2.BackgroundTransparency = 1.000
-Frame_2.Position = UDim2.new(0.650162339, 0, 0.939698517, 0)
-Frame_2.Size = UDim2.new(0, 407, 0, 6)
+Frame_2.Position = UDim2.new(0.0091770459, 0, 0.785711706, 0)
+Frame_2.Size = UDim2.new(0, 149, 0, 122)
 Frame_2.Image = "rbxassetid://3570695787"
-Frame_2.ImageColor3 = Color3.fromRGB(40, 63, 79)
+Frame_2.ImageColor3 = Color3.fromRGB(61, 61, 61)
 Frame_2.ScaleType = Enum.ScaleType.Slice
 Frame_2.SliceCenter = Rect.new(100, 100, 100, 100)
 Frame_2.SliceScale = 0.120
 
+TextLabel_2.Parent = Frame_2
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.BackgroundTransparency = 1.000
+TextLabel_2.Position = UDim2.new(0.175438598, 0, 0.384105951, 0)
+TextLabel_2.Size = UDim2.new(0, 98, 0, 29)
+TextLabel_2.Font = Enum.Font.Code
+TextLabel_2.Text = "YTEtcetera#6526"
+TextLabel_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.TextScaled = true
+TextLabel_2.TextSize = 14.000
+TextLabel_2.TextWrapped = true
+
+TextLabel_3.Parent = Frame_2
+TextLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_3.BackgroundTransparency = 1.000
+TextLabel_3.Position = UDim2.new(0.175438598, 0, 0.192052975, 0)
+TextLabel_3.Size = UDim2.new(0, 98, 0, 29)
+TextLabel_3.Font = Enum.Font.Code
+TextLabel_3.Text = "z4xi#7679"
+TextLabel_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_3.TextScaled = true
+TextLabel_3.TextSize = 14.000
+TextLabel_3.TextWrapped = true
+
+TextLabel_4.Parent = Frame_2
+TextLabel_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_4.BackgroundTransparency = 1.000
+TextLabel_4.Position = UDim2.new(0.210526317, 0, 0, 0)
+TextLabel_4.Size = UDim2.new(0, 98, 0, 29)
+TextLabel_4.Font = Enum.Font.Code
+TextLabel_4.Text = "made by:"
+TextLabel_4.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_4.TextScaled = true
+TextLabel_4.TextSize = 14.000
+TextLabel_4.TextWrapped = true
+
+TextButton.Parent = Frame_2
+TextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton.BackgroundTransparency = 1.000
+TextButton.Position = UDim2.new(0.790575922, 0, -0.0599352531, 0)
+TextButton.Size = UDim2.new(0, 40, 0, 39)
+TextButton.Font = Enum.Font.SourceSans
+TextButton.Text = "X"
+TextButton.TextColor3 = Color3.fromRGB(255, 0, 0)
+TextButton.TextSize = 24.000
+
 -- Scripts:
 
-local function WAIFQ_fake_script() -- ScreenGui.GuiScript 
-	local script = Instance.new('LocalScript', ScreenGui)
+local function YCQQT_fake_script() -- Roundify.LocalScript 
+	local script = Instance.new('LocalScript', Roundify)
 
+	wait(1)
+	
 	game:GetService("StarterGui"):SetCore("SendNotification",{
 		Title = "voidsploit beta";
 		Text = "loading";
@@ -114,127 +306,166 @@ local function WAIFQ_fake_script() -- ScreenGui.GuiScript
 	--VARIABLES
 	--//
 	
-	local plr = game.StarterPlayer
-	local flyscript = script.Parent.LocalScript
+	local plr = game:GetService("Players").LocalPlayer
 	local frame = script.Parent
+	local Character = plr.Character or Player.CharacterAdded:Wait()
+	local Humanoid = Character:WaitForChild('Humanoid')
 	
 	--// BUTTONS //--
 	
-	local flybtn = script.Parent.FlyButton
-	local speedbtn = script.Parent.SpeedButton
+	-- local flybtn = script.Parent:WaitForChild("FlyButton")
+	local speedbtn = script.Parent:WaitForChild("SpeedButton")
+	local powerbtn = script.Parent:WaitForChild("JumpPowerButton")
+	local powertxtbox = script.Parent:WaitForChild("PowerTxtBox")
+	local speedtxtbox = script.Parent:WaitForChild("SpeedTxtBox")
+	local killbtn = script.Parent:WaitForChild("KillScript")
+	local godbtn = script.Parent:WaitForChild("GodButton")
+	local jpbtn = script.Parent:WaitForChild("JumpPowerButton")
 	
 	--//
 	-- FUNCTIONS (button clicks)
 	--//
 	
+	function speedbutton()
+		local speedcontent = speedtxtbox.Text
+		local speed = speedcontent
+		Humanoid.WalkSpeed = speed
+		print("Speed set to", speed)
+	end
+	
+	function jumppower()
+		local powercontent = powertxtbox.Text
+		local power = powercontent
+		Humanoid.JumpHeight = power
+		print("Jumppower set to", power)
+	end
+	
+	function god()
+		Humanoid.MaxHealth = 9999999999999
+		Humanoid.Health = 9999999999999
+	end
+	
+	function noclip()
+		
+	end
+	
+	function rejoin()
+		game:GetService("TeleportService"):Teleport(000, plr)
+	end
+	
+	function kill()
+		script.Parent:Destroy()
+	end
+	 
+	speedbtn.MouseButton1Click:Connect(speedbutton)
+	
+	powerbtn.MouseButton1Click:Connect(jumppower)
+	
+	killbtn.MouseButton1Click:Connect(kill)
+	
+	godbtn.MouseButton1Click:Connect(god)
+	
 	game:GetService("StarterGui"):SetCore("SendNotification",{
 		Title = "voidsploit beta";
-		Text = "loaded";
+		Text = "loaded!";
 	})
-	
-	flybtn.MouseButton1Click:Connect(function()
-		print("Flying")
-		loadstring(game:HttpGet("https://pastebin.com/raw/7rXZ9VNc", true))()
-		print("Press E to toggle fly")
-	end)
-	
-	
 end
-coroutine.wrap(WAIFQ_fake_script)()
-local function QCIY_fake_script() -- ScreenGui.LocalScript 
-	local script = Instance.new('LocalScript', ScreenGui)
+coroutine.wrap(YCQQT_fake_script)()
+local function ZTTXRC_fake_script() -- Frame.Draggable 
+	local script = Instance.new('LocalScript', Frame)
 
-	-- Fly GUI
+	--Not made by me, check out this video: https://www.youtube.com/watch?v=z25nyNBG7Js&t=22s
+	--Put this inside of your Frame and configure the speed if you would like.
+	--Enjoy! Credits go to: https://www.youtube.com/watch?v=z25nyNBG7Js&t=22s
 	
+	local UIS = game:GetService('UserInputService')
+	local frame = script.Parent
+	local dragToggle = nil
+	local dragSpeed = 0.25
+	local dragStart = nil
+	local startPos = nil
 	
-	-- Instances:
+	local function updateInput(input)
+		local delta = input.Position - dragStart
+		local position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X,
+			startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+		game:GetService('TweenService'):Create(frame, TweenInfo.new(dragSpeed), {Position = position}):Play()
+	end
 	
-	local fly = Instance.new("ScreenGui")
-	local epic = Instance.new("Frame")
-	local backgroundtitle = Instance.new("TextLabel")
-	local creator = Instance.new("TextLabel")
-	local title = Instance.new("TextLabel")
-	local close = Instance.new("TextButton")
-	local flybutton = Instance.new("TextButton")
-	
-	--Properties:
-	
-	fly.Name = "fly"
-	fly.Parent = game.CoreGui
-	fly.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-	
-	epic.Name = "epic"
-	epic.Parent = fly
-	epic.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-	epic.Position = UDim2.new(0.0911376476, 0, 0.466830462, 0)
-	epic.Size = UDim2.new(0, 181, 0, 178)
-	epic.Active = true
-	epic.Draggable = true
-	
-	backgroundtitle.Name = "backgroundtitle"
-	backgroundtitle.Parent = epic
-	backgroundtitle.BackgroundColor3 = Color3.fromRGB(170, 0, 255)
-	backgroundtitle.Size = UDim2.new(0, 182, 0, 43)
-	backgroundtitle.Font = Enum.Font.SciFi
-	backgroundtitle.Text = ""
-	backgroundtitle.TextColor3 = Color3.fromRGB(0, 0, 0)
-	backgroundtitle.TextScaled = true
-	backgroundtitle.TextSize = 14.000
-	backgroundtitle.TextWrapped = true
-	
-	creator.Name = "creator"
-	creator.Parent = epic
-	creator.BackgroundColor3 = Color3.fromRGB(170, 0, 255)
-	creator.Position = UDim2.new(0.00442049652, 0, 0.762519121, 0)
-	creator.Size = UDim2.new(0, 181, 0, 42)
-	creator.Font = Enum.Font.SourceSans
-	creator.Text = "Made by Arowix"
-	creator.TextColor3 = Color3.fromRGB(0, 0, 0)
-	creator.TextScaled = true
-	creator.TextSize = 14.000
-	creator.TextWrapped = true
-	
-	title.Name = "title"
-	title.Parent = epic
-	title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-	title.BackgroundTransparency = 1.000
-	title.Position = UDim2.new(0.0497237556, 0, 0, 0)
-	title.Size = UDim2.new(0, 119, 0, 43)
-	title.Font = Enum.Font.SciFi
-	title.Text = "Fly"
-	title.TextColor3 = Color3.fromRGB(0, 0, 0)
-	title.TextScaled = true
-	title.TextSize = 14.000
-	title.TextWrapped = true
-	
-	close.Name = "close"
-	close.Parent = epic
-	close.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
-	close.Position = UDim2.new(0.76795578, 0, 0, 0)
-	close.Size = UDim2.new(0, 43, 0, 43)
-	close.Font = Enum.Font.GothamBlack
-	close.Text = "X"
-	close.TextColor3 = Color3.fromRGB(0, 0, 0)
-	close.TextScaled = true
-	close.TextSize = 14.000
-	close.TextWrapped = true
-	close.MouseButton1Down:connect(function()
-		epic.Visible = false
+	frame.InputBegan:Connect(function(input)
+		if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) then 
+			dragToggle = true
+			dragStart = input.Position
+			startPos = frame.Position
+			input.Changed:Connect(function()
+				if input.UserInputState == Enum.UserInputState.End then
+					dragToggle = false
+				end
+			end)
+		end
 	end)
 	
-	flybutton.Name = "flybutton"
-	flybutton.Parent = epic
-	flybutton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-	flybutton.Position = UDim2.new(0.243093923, 0, 0.344781578, 0)
-	flybutton.Size = UDim2.new(0, 84, 0, 42)
-	flybutton.Font = Enum.Font.SourceSans
-	flybutton.Text = "Click me to Fly"
-	flybutton.TextColor3 = Color3.fromRGB(0, 0, 0)
-	flybutton.TextSize = 14.000
-	flybutton.MouseButton1Down:connect(function()
-		loadstring(game:HttpGet("https://pastebin.com/raw/7rXZ9VNc", true))()
-		flybutton.Text = "Press E to fly and unfly"
-		flybutton.TextSize = 10.000
+	UIS.InputChanged:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+			if dragToggle then
+				updateInput(input)
+			end
+		end
+	end)
+	
+end
+coroutine.wrap(ZTTXRC_fake_script)()
+local function WNXYFT_fake_script() -- Frame_2.LocalScript 
+	local script = Instance.new('LocalScript', Frame_2)
+
+	local closebtn = script.Parent.TextButton
+	
+	closebtn.MouseButton1Click:Connect(function()
+		script.Parent:Destroy()
 	end)
 end
-coroutine.wrap(QCIY_fake_script)()
+coroutine.wrap(WNXYFT_fake_script)()
+local function AJKUXTQ_fake_script() -- Frame_2.Draggable 
+	local script = Instance.new('LocalScript', Frame_2)
+
+	--Not made by me, check out this video: https://www.youtube.com/watch?v=z25nyNBG7Js&t=22s
+	--Put this inside of your Frame and configure the speed if you would like.
+	--Enjoy! Credits go to: https://www.youtube.com/watch?v=z25nyNBG7Js&t=22s
+	
+	local UIS = game:GetService('UserInputService')
+	local frame = script.Parent
+	local dragToggle = nil
+	local dragSpeed = 0.25
+	local dragStart = nil
+	local startPos = nil
+	
+	local function updateInput(input)
+		local delta = input.Position - dragStart
+		local position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X,
+			startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+		game:GetService('TweenService'):Create(frame, TweenInfo.new(dragSpeed), {Position = position}):Play()
+	end
+	
+	frame.InputBegan:Connect(function(input)
+		if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) then 
+			dragToggle = true
+			dragStart = input.Position
+			startPos = frame.Position
+			input.Changed:Connect(function()
+				if input.UserInputState == Enum.UserInputState.End then
+					dragToggle = false
+				end
+			end)
+		end
+	end)
+	
+	UIS.InputChanged:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+			if dragToggle then
+				updateInput(input)
+			end
+		end
+	end)
+	
+end
+coroutine.wrap(AJKUXTQ_fake_script)()
