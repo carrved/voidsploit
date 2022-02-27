@@ -38,6 +38,7 @@ Main.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 
 Frame.Parent = Main
 Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame.BackgroundTransparency = 1.000
 Frame.BorderSizePixel = 0
 Frame.Position = UDim2.new(0.616883099, 0, 0.510887802, 0)
 Frame.Size = UDim2.new(0, 451, 0, 284)
@@ -191,10 +192,10 @@ TpToPlrBtn.Name = "TpToPlrBtn"
 TpToPlrBtn.Parent = Roundify
 TpToPlrBtn.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 TpToPlrBtn.BackgroundTransparency = 0.500
-TpToPlrBtn.Position = UDim2.new(0.055669874, 0, 0.0368308127, 0)
+TpToPlrBtn.Position = UDim2.new(0.055669874, 0, 0.173194453, 0)
 TpToPlrBtn.Size = UDim2.new(0.231357589, 0, 0.0954551548, 0)
 TpToPlrBtn.Font = Enum.Font.Code
-TpToPlrBtn.Text = "sit"
+TpToPlrBtn.Text = "tp to plr"
 TpToPlrBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
 TpToPlrBtn.TextSize = 14.000
 
@@ -261,7 +262,7 @@ TextButton.TextSize = 24.000
 
 -- Scripts:
 
-local function AKSFT_fake_script() -- Roundify.Handler 
+local function JJHDIID_fake_script() -- Roundify.Handler 
 	local script = Instance.new('LocalScript', Roundify)
 
 	wait(1)
@@ -384,8 +385,8 @@ local function AKSFT_fake_script() -- Roundify.Handler
 		Text = "loaded!";
 	})
 end
-coroutine.wrap(AKSFT_fake_script)()
-local function WJBIOX_fake_script() -- Frame.Draggable 
+coroutine.wrap(JJHDIID_fake_script)()
+local function GQNSYLF_fake_script() -- Frame.Draggable 
 	local script = Instance.new('LocalScript', Frame)
 
 	--Not made by me, check out this video: https://www.youtube.com/watch?v=z25nyNBG7Js&t=22s
@@ -428,8 +429,8 @@ local function WJBIOX_fake_script() -- Frame.Draggable
 	end)
 	
 end
-coroutine.wrap(WJBIOX_fake_script)()
-local function VRFMBJJ_fake_script() -- Frame_2.LocalScript 
+coroutine.wrap(GQNSYLF_fake_script)()
+local function OVUC_fake_script() -- Frame_2.LocalScript 
 	local script = Instance.new('LocalScript', Frame_2)
 
 	local closebtn = script.Parent.TextButton
@@ -438,8 +439,8 @@ local function VRFMBJJ_fake_script() -- Frame_2.LocalScript
 		script.Parent:Destroy()
 	end)
 end
-coroutine.wrap(VRFMBJJ_fake_script)()
-local function OQFIVWL_fake_script() -- Frame_2.Draggable 
+coroutine.wrap(OVUC_fake_script)()
+local function UJEZ_fake_script() -- Frame_2.Draggable 
 	local script = Instance.new('LocalScript', Frame_2)
 
 	--Not made by me, check out this video: https://www.youtube.com/watch?v=z25nyNBG7Js&t=22s
@@ -482,4 +483,5 @@ local function OQFIVWL_fake_script() -- Frame_2.Draggable
 	end)
 	
 end
-coroutine.wrap(OQFIVWL_fake_script)()
+coroutine.wrap(UJEZ_fake_script)()
+
