@@ -29,6 +29,10 @@ local TpToPlrBtn = Instance.new("TextButton")
 local UIAspectRatioConstraint_8 = Instance.new("UIAspectRatioConstraint")
 local RejoinButton = Instance.new("TextButton")
 local UIAspectRatioConstraint_9 = Instance.new("UIAspectRatioConstraint")
+local SpinTxtBox = Instance.new("TextBox")
+local UIAspectRatioConstraint_10 = Instance.new("UIAspectRatioConstraint")
+local SpinButton = Instance.new("TextButton")
+local UIAspectRatioConstraint_11 = Instance.new("UIAspectRatioConstraint")
 local Frame_2 = Instance.new("ImageLabel")
 local TextLabel_2 = Instance.new("TextLabel")
 local TextLabel_3 = Instance.new("TextLabel")
@@ -52,14 +56,14 @@ Roundify.Parent = Frame
 Roundify.AnchorPoint = Vector2.new(0.5, 0.5)
 Roundify.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Roundify.BackgroundTransparency = 1.000
-Roundify.Position = UDim2.new(0.5, 0, 0.457894713, 0)
+Roundify.Position = UDim2.new(1.06541014, 0, 1.24662709, 0)
 Roundify.Size = UDim2.new(1, 24, 1, 24)
 Roundify.Image = "rbxassetid://3570695787"
 Roundify.ScaleType = Enum.ScaleType.Slice
 Roundify.SliceCenter = Rect.new(100, 100, 100, 100)
 Roundify.SliceScale = 0.120
 
-UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(170, 85, 255)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(170, 170, 255))}
+UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(66, 240, 255)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(170, 170, 255))}
 UIGradient.Parent = Roundify
 
 SpeedButton.Name = "SpeedButton"
@@ -220,11 +224,42 @@ RejoinButton.TextSize = 14.000
 UIAspectRatioConstraint_9.Parent = RejoinButton
 UIAspectRatioConstraint_9.AspectRatio = 3.139
 
+SpinTxtBox.Name = "SpinTxtBox"
+SpinTxtBox.Parent = Roundify
+SpinTxtBox.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+SpinTxtBox.BackgroundTransparency = 0.500
+SpinTxtBox.Position = UDim2.new(0.298404366, 0, 0.801208258, 0)
+SpinTxtBox.Size = UDim2.new(0.274353266, 0, 0.0715913698, 0)
+SpinTxtBox.Font = Enum.Font.Code
+SpinTxtBox.PlaceholderText = "enter spin power here"
+SpinTxtBox.Text = ""
+SpinTxtBox.TextColor3 = Color3.fromRGB(0, 0, 0)
+SpinTxtBox.TextScaled = true
+SpinTxtBox.TextSize = 14.000
+SpinTxtBox.TextWrapped = true
+
+UIAspectRatioConstraint_10.Parent = SpinTxtBox
+UIAspectRatioConstraint_10.AspectRatio = 4.963
+
+SpinButton.Name = "SpinButton"
+SpinButton.Parent = Roundify
+SpinButton.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+SpinButton.BackgroundTransparency = 0.500
+SpinButton.Position = UDim2.new(0.527248859, 0, 0.173194453, 0)
+SpinButton.Size = UDim2.new(0.231357589, 0, 0.0954551548, 0)
+SpinButton.Font = Enum.Font.Code
+SpinButton.Text = "spin"
+SpinButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+SpinButton.TextSize = 14.000
+
+UIAspectRatioConstraint_11.Parent = SpinButton
+UIAspectRatioConstraint_11.AspectRatio = 3.139
+
 Frame_2.Name = "Frame"
 Frame_2.Parent = Main
 Frame_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Frame_2.BackgroundTransparency = 1.000
-Frame_2.Position = UDim2.new(0.0091770459, 0, 0.785711706, 0)
+Frame_2.Position = UDim2.new(0.00605204608, 0, 0.879230201, 0)
 Frame_2.Size = UDim2.new(0, 149, 0, 122)
 Frame_2.Image = "rbxassetid://3570695787"
 Frame_2.ImageColor3 = Color3.fromRGB(61, 61, 61)
@@ -280,7 +315,7 @@ TextButton.TextSize = 24.000
 
 -- Scripts:
 
-local function PFPEI_fake_script() -- Roundify.Handler 
+local function VQFU_fake_script() -- Roundify.Handler 
 	local script = Instance.new('LocalScript', Roundify)
 
 	wait(1)
@@ -312,6 +347,8 @@ local function PFPEI_fake_script() -- Roundify.Handler
 	local sitbtn = script.Parent:WaitForChild("SitButton")
 	local tpplrbtn = script.Parent:WaitForChild("TpToPlrBtn")
 	local rjbtn = script.Parent:WaitForChild("RejoinButton")
+	local spintxtbox = script.Parent:WaitForChild("SpinTxtBox")
+	local spinbtn = script.Parent:WaitForChild("SpinButton")
 	--//
 	-- FUNCTIONS (button clicks)
 	--//
@@ -362,20 +399,38 @@ local function PFPEI_fake_script() -- Roundify.Handler
 		local plr2 = game.Workspace:FindFirstChild(plrtxt)
 		plr1.HumanoidRootPart.CFrame = plr2.HumanoidRootPart.CFrame * CFrame.new(0,2,0)
 	end
+	
+	function spin()
+		-- Made by JackMcJagger15
+		
+		local spintxtcontent = spintxtbox.Text
+		local spinpower = spintxtcontent
+	
+		power = spintxtcontent -- change this to make it more or less powerful
+	
+		game:GetService('RunService').Stepped:connect(function()
+			game.Players.LocalPlayer.Character.Head.CanCollide = false
+			game.Players.LocalPlayer.Character.UpperTorso.CanCollide = false
+			game.Players.LocalPlayer.Character.LowerTorso.CanCollide = false
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CanCollide = false
+		end)
+		wait(.1)
+		local bambam = Instance.new("BodyThrust")
+		bambam.Parent = game.Players.LocalPlayer.Character.HumanoidRootPart
+		bambam.Force = Vector3.new(power,0,power)
+		bambam.Location = game.Players.LocalPlayer.Character.HumanoidRootPart.Position
+		
+		print("Now spinning at speed", spinpower)
+	end
 	 
 	speedbtn.MouseButton1Click:Connect(speedbutton)
-	
 	powerbtn.MouseButton1Click:Connect(jumppower)
-	
 	killbtn.MouseButton1Click:Connect(kill)
-	
 	godbtn.MouseButton1Click:Connect(god)
-	
 	sitbtn.MouseButton1Click:Connect(sit)
-	
 	tpplrbtn.MouseButton1Click:Connect(tptoplr)
-	
 	rjbtn.MouseButton1Click:Connect(rejoin)
+	spinbtn.MouseButton1Click:Connect(spin)
 	
 	--//
 	-- COMMANDS
@@ -400,8 +455,8 @@ local function PFPEI_fake_script() -- Roundify.Handler
 		Text = "loaded!";
 	})
 end
-coroutine.wrap(PFPEI_fake_script)()
-local function INUPC_fake_script() -- Frame.Draggable 
+coroutine.wrap(VQFU_fake_script)()
+local function HEVYMOT_fake_script() -- Frame.Draggable 
 	local script = Instance.new('LocalScript', Frame)
 
 	--Not made by me, check out this video: https://www.youtube.com/watch?v=z25nyNBG7Js&t=22s
@@ -444,8 +499,8 @@ local function INUPC_fake_script() -- Frame.Draggable
 	end)
 	
 end
-coroutine.wrap(INUPC_fake_script)()
-local function OASGGWS_fake_script() -- Frame_2.LocalScript 
+coroutine.wrap(HEVYMOT_fake_script)()
+local function PWUZRO_fake_script() -- Frame_2.LocalScript 
 	local script = Instance.new('LocalScript', Frame_2)
 
 	local closebtn = script.Parent.TextButton
@@ -454,8 +509,8 @@ local function OASGGWS_fake_script() -- Frame_2.LocalScript
 		script.Parent:Destroy()
 	end)
 end
-coroutine.wrap(OASGGWS_fake_script)()
-local function PZML_fake_script() -- Frame_2.Draggable 
+coroutine.wrap(PWUZRO_fake_script)()
+local function YMARY_fake_script() -- Frame_2.Draggable 
 	local script = Instance.new('LocalScript', Frame_2)
 
 	--Not made by me, check out this video: https://www.youtube.com/watch?v=z25nyNBG7Js&t=22s
@@ -498,4 +553,4 @@ local function PZML_fake_script() -- Frame_2.Draggable
 	end)
 	
 end
-coroutine.wrap(PZML_fake_script)()
+coroutine.wrap(YMARY_fake_script)()
