@@ -375,7 +375,7 @@ local function OJGE_fake_script() -- Roundify.Handler
 	
 	sitbtn.MouseButton1Click:Connect(sit)
 	
-	tptoplr.MouseButton1Click:Connect(tptoplr())
+	tptoplr.MouseButton1Click:Connect(tptoplr)
 	
 	--//
 	-- COMMANDS
