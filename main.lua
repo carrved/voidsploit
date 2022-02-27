@@ -23,6 +23,8 @@ local SitButton = Instance.new("TextButton")
 local UIAspectRatioConstraint_6 = Instance.new("UIAspectRatioConstraint")
 local PlrTxtBox = Instance.new("TextBox")
 local UIAspectRatioConstraint_7 = Instance.new("UIAspectRatioConstraint")
+local TpToPlrBtn = Instance.new("TextButton")
+local UIAspectRatioConstraint_8 = Instance.new("UIAspectRatioConstraint")
 local Frame_2 = Instance.new("ImageLabel")
 local TextLabel_2 = Instance.new("TextLabel")
 local TextLabel_3 = Instance.new("TextLabel")
@@ -185,6 +187,20 @@ PlrTxtBox.TextWrapped = true
 UIAspectRatioConstraint_7.Parent = PlrTxtBox
 UIAspectRatioConstraint_7.AspectRatio = 4.963
 
+TpToPlrBtn.Name = "TpToPlrBtn"
+TpToPlrBtn.Parent = Roundify
+TpToPlrBtn.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TpToPlrBtn.BackgroundTransparency = 0.500
+TpToPlrBtn.Position = UDim2.new(0.055669874, 0, 0.0368308127, 0)
+TpToPlrBtn.Size = UDim2.new(0.231357589, 0, 0.0954551548, 0)
+TpToPlrBtn.Font = Enum.Font.Code
+TpToPlrBtn.Text = "sit"
+TpToPlrBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
+TpToPlrBtn.TextSize = 14.000
+
+UIAspectRatioConstraint_8.Parent = TpToPlrBtn
+UIAspectRatioConstraint_8.AspectRatio = 3.139
+
 Frame_2.Name = "Frame"
 Frame_2.Parent = Main
 Frame_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -245,7 +261,7 @@ TextButton.TextSize = 24.000
 
 -- Scripts:
 
-local function UUULGQ_fake_script() -- Roundify.Handler 
+local function AKSFT_fake_script() -- Roundify.Handler 
 	local script = Instance.new('LocalScript', Roundify)
 
 	wait(1)
@@ -274,6 +290,7 @@ local function UUULGQ_fake_script() -- Roundify.Handler
 	local killbtn = script.Parent:WaitForChild("KillScript")
 	local godbtn = script.Parent:WaitForChild("GodButton")
 	local sitbtn = script.Parent:WaitForChild("SitButton")
+	local tpplrbtn = script.Parent:WaitForChild("TpToPlrBtn")
 	
 	--//
 	-- FUNCTIONS (button clicks)
@@ -342,17 +359,23 @@ local function UUULGQ_fake_script() -- Roundify.Handler
 	
 	sitbtn.MouseButton1Click:Connect(sit)
 	
+	tptoplr.MouseButton1Click:Connect(tptoplr())
+	
 	--//
 	-- COMMANDS
 	--//
 	
 	Player.Chatted:connect(function(cht)
 		if cht:match("!speed") then
-			loadstring(game:HttpGet("https://pastebin.com/raw/RNWgaqCE", true))() -- make sure you add in the script too
-		elseif cht:match("!fly") then -- add what you want to say for the script to execute so i put "admin" because i want it to load an admin script
+			speedbutton()
+		elseif cht:match("!fly") then
 			--
 		elseif cht:match("!sit") then
 			Humanoid.Sit()
+		elseif cht:match("!jp") then
+			jumppower()
+		elseif cht:match("!god") then
+			god()
 		end
 	end)
 	
@@ -361,8 +384,8 @@ local function UUULGQ_fake_script() -- Roundify.Handler
 		Text = "loaded!";
 	})
 end
-coroutine.wrap(UUULGQ_fake_script)()
-local function OQRZ_fake_script() -- Frame.Draggable 
+coroutine.wrap(AKSFT_fake_script)()
+local function WJBIOX_fake_script() -- Frame.Draggable 
 	local script = Instance.new('LocalScript', Frame)
 
 	--Not made by me, check out this video: https://www.youtube.com/watch?v=z25nyNBG7Js&t=22s
@@ -405,8 +428,8 @@ local function OQRZ_fake_script() -- Frame.Draggable
 	end)
 	
 end
-coroutine.wrap(OQRZ_fake_script)()
-local function ZXYEFDL_fake_script() -- Frame_2.LocalScript 
+coroutine.wrap(WJBIOX_fake_script)()
+local function VRFMBJJ_fake_script() -- Frame_2.LocalScript 
 	local script = Instance.new('LocalScript', Frame_2)
 
 	local closebtn = script.Parent.TextButton
@@ -415,8 +438,8 @@ local function ZXYEFDL_fake_script() -- Frame_2.LocalScript
 		script.Parent:Destroy()
 	end)
 end
-coroutine.wrap(ZXYEFDL_fake_script)()
-local function YKMD_fake_script() -- Frame_2.Draggable 
+coroutine.wrap(VRFMBJJ_fake_script)()
+local function OQFIVWL_fake_script() -- Frame_2.Draggable 
 	local script = Instance.new('LocalScript', Frame_2)
 
 	--Not made by me, check out this video: https://www.youtube.com/watch?v=z25nyNBG7Js&t=22s
@@ -459,4 +482,4 @@ local function YKMD_fake_script() -- Frame_2.Draggable
 	end)
 	
 end
-coroutine.wrap(YKMD_fake_script)()
+coroutine.wrap(OQFIVWL_fake_script)()
