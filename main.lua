@@ -21,6 +21,8 @@ local UIAspectRatioConstraint_5 = Instance.new("UIAspectRatioConstraint")
 local KillScript = Instance.new("TextButton")
 local SitButton = Instance.new("TextButton")
 local UIAspectRatioConstraint_6 = Instance.new("UIAspectRatioConstraint")
+local PlrTxtBox = Instance.new("TextBox")
+local UIAspectRatioConstraint_7 = Instance.new("UIAspectRatioConstraint")
 local Frame_2 = Instance.new("ImageLabel")
 local TextLabel_2 = Instance.new("TextLabel")
 local TextLabel_3 = Instance.new("TextLabel")
@@ -166,6 +168,23 @@ SitButton.TextSize = 14.000
 UIAspectRatioConstraint_6.Parent = SitButton
 UIAspectRatioConstraint_6.AspectRatio = 3.139
 
+PlrTxtBox.Name = "PlrTxtBox"
+PlrTxtBox.Parent = Roundify
+PlrTxtBox.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+PlrTxtBox.BackgroundTransparency = 0.500
+PlrTxtBox.Position = UDim2.new(0.0254417658, 0, 0.804455042, 0)
+PlrTxtBox.Size = UDim2.new(0.230387464, 0, 0.0748381168, 0)
+PlrTxtBox.Font = Enum.Font.Code
+PlrTxtBox.PlaceholderText = "enter player here"
+PlrTxtBox.Text = ""
+PlrTxtBox.TextColor3 = Color3.fromRGB(0, 0, 0)
+PlrTxtBox.TextScaled = true
+PlrTxtBox.TextSize = 14.000
+PlrTxtBox.TextWrapped = true
+
+UIAspectRatioConstraint_7.Parent = PlrTxtBox
+UIAspectRatioConstraint_7.AspectRatio = 4.963
+
 Frame_2.Name = "Frame"
 Frame_2.Parent = Main
 Frame_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -226,7 +245,7 @@ TextButton.TextSize = 24.000
 
 -- Scripts:
 
-local function LZFV_fake_script() -- Roundify.Handler 
+local function UUULGQ_fake_script() -- Roundify.Handler 
 	local script = Instance.new('LocalScript', Roundify)
 
 	wait(1)
@@ -301,6 +320,17 @@ local function LZFV_fake_script() -- Roundify.Handler
 		Humanoid.Sit = true
 		print("Sitting (obviously)")
 	end
+	
+	function tptoplr()
+		game:GetService("UserInputService").InputBegan:connect(function(key)
+			if key.KeyCode == Enum.KeyCode.T then --Replace E with the key you would like to be pressed
+				local ooooooof = TextBox.Text
+				local plr1 = game.Players.LocalPlayer.Character
+				local plr2 = script.Parent.PlrTxtBox.Text
+				plr1.HumanoidRootPart.CFrame = plr2.HumanoidRootPart.CFrame * CFrame.new(0,2,0)
+			end
+		end)
+	end
 	 
 	speedbtn.MouseButton1Click:Connect(speedbutton)
 	
@@ -331,8 +361,8 @@ local function LZFV_fake_script() -- Roundify.Handler
 		Text = "loaded!";
 	})
 end
-coroutine.wrap(LZFV_fake_script)()
-local function WUZY_fake_script() -- Frame.Draggable 
+coroutine.wrap(UUULGQ_fake_script)()
+local function OQRZ_fake_script() -- Frame.Draggable 
 	local script = Instance.new('LocalScript', Frame)
 
 	--Not made by me, check out this video: https://www.youtube.com/watch?v=z25nyNBG7Js&t=22s
@@ -375,8 +405,8 @@ local function WUZY_fake_script() -- Frame.Draggable
 	end)
 	
 end
-coroutine.wrap(WUZY_fake_script)()
-local function VPFPK_fake_script() -- Frame_2.LocalScript 
+coroutine.wrap(OQRZ_fake_script)()
+local function ZXYEFDL_fake_script() -- Frame_2.LocalScript 
 	local script = Instance.new('LocalScript', Frame_2)
 
 	local closebtn = script.Parent.TextButton
@@ -385,8 +415,8 @@ local function VPFPK_fake_script() -- Frame_2.LocalScript
 		script.Parent:Destroy()
 	end)
 end
-coroutine.wrap(VPFPK_fake_script)()
-local function NZUJY_fake_script() -- Frame_2.Draggable 
+coroutine.wrap(ZXYEFDL_fake_script)()
+local function YKMD_fake_script() -- Frame_2.Draggable 
 	local script = Instance.new('LocalScript', Frame_2)
 
 	--Not made by me, check out this video: https://www.youtube.com/watch?v=z25nyNBG7Js&t=22s
@@ -429,4 +459,4 @@ local function NZUJY_fake_script() -- Frame_2.Draggable
 	end)
 	
 end
-coroutine.wrap(NZUJY_fake_script)()
+coroutine.wrap(YKMD_fake_script)()
