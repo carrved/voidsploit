@@ -3,6 +3,8 @@
 -- MADE WITH z4xi#7679 and YTEtcetera#6526
 -- no skid or death and demise and despair
 
+-- Instances:
+
 local Main = Instance.new("ScreenGui")
 local Frame = Instance.new("Frame")
 local Roundify = Instance.new("ImageLabel")
@@ -355,14 +357,10 @@ local function OJGE_fake_script() -- Roundify.Handler
 	end
 	
 	function tptoplr()
-		game:GetService("UserInputService").InputBegan:connect(function(key)
-			if key.KeyCode == Enum.KeyCode.E then --Replace E with the key you would like to be pressed
-				local ooooooof = plrtxtbox.Text
-				local plr1 = game.Players.LocalPlayer.Character
-				local plr2 = game.Workspace:FindFirstChild(ooooooof)
-				plr1.HumanoidRootPart.CFrame = plr2.HumanoidRootPart.CFrame * CFrame.new(0,2,0)
-			end
-		end)
+		local plrtxt = plrtxtbox.Text
+		local plr1 = game.Players.LocalPlayer.Character
+		local plr2 = game.Workspace:FindFirstChild(plrtxt)
+		plr1.HumanoidRootPart.CFrame = plr2.HumanoidRootPart.CFrame * CFrame.new(0,2,0)
 	end
 	 
 	speedbtn.MouseButton1Click:Connect(speedbutton)
@@ -375,7 +373,7 @@ local function OJGE_fake_script() -- Roundify.Handler
 	
 	sitbtn.MouseButton1Click:Connect(sit)
 	
-	tptoplr.MouseButton1Click:Connect(tptoplr(E))
+	tptoplr.MouseButton1Click:Connect(tptoplr())
 	
 	--//
 	-- COMMANDS
@@ -499,4 +497,5 @@ local function LDBQF_fake_script() -- Frame_2.Draggable
 	
 end
 coroutine.wrap(LDBQF_fake_script)()
+
 
