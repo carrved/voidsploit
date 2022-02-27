@@ -280,7 +280,7 @@ TextButton.TextSize = 24.000
 
 -- Scripts:
 
-local function OJGE_fake_script() -- Roundify.Handler 
+local function DBWFCHD_fake_script() -- Roundify.Handler 
 	local script = Instance.new('LocalScript', Roundify)
 
 	wait(1)
@@ -373,33 +373,33 @@ local function OJGE_fake_script() -- Roundify.Handler
 	
 	sitbtn.MouseButton1Click:Connect(sit)
 	
-	tptoplr.MouseButton1Click:Connect(tptoplr)
+	tpplrbtn.MouseButton1Click:Connect(tptoplr)
 	
 	--//
 	-- COMMANDS
 	--//
 	
-	Player.Chatted:connect(function(cht)
-		if cht:match("!speed") then
-			speedbutton()
-		elseif cht:match("!fly") then
-			--
-		elseif cht:match("!sit") then
-			Humanoid.Sit()
-		elseif cht:match("!jp") then
-			jumppower()
-		elseif cht:match("!god") then
-			god()
-		end
-	end)
+	--Player.Chatted:connect(function(cht)
+	--	if cht:match("!speed") then
+	--		speedbutton()
+	--	elseif cht:match("!fly") then
+	--		--
+	--	elseif cht:match("!sit") then
+	--		Humanoid.Sit()
+	--	elseif cht:match("!jp") then
+	--		jumppower()
+	--	elseif cht:match("!god") then
+	--		god()
+	--	end
+	--end)
 	
 	game:GetService("StarterGui"):SetCore("SendNotification",{
 		Title = "voidsploit beta";
 		Text = "loaded!";
 	})
 end
-coroutine.wrap(OJGE_fake_script)()
-local function REMKLE_fake_script() -- Frame.Draggable 
+coroutine.wrap(DBWFCHD_fake_script)()
+local function JJKV_fake_script() -- Frame.Draggable 
 	local script = Instance.new('LocalScript', Frame)
 
 	--Not made by me, check out this video: https://www.youtube.com/watch?v=z25nyNBG7Js&t=22s
@@ -442,8 +442,8 @@ local function REMKLE_fake_script() -- Frame.Draggable
 	end)
 	
 end
-coroutine.wrap(REMKLE_fake_script)()
-local function ESZKON_fake_script() -- Frame_2.LocalScript 
+coroutine.wrap(JJKV_fake_script)()
+local function AKEDT_fake_script() -- Frame_2.LocalScript 
 	local script = Instance.new('LocalScript', Frame_2)
 
 	local closebtn = script.Parent.TextButton
@@ -452,8 +452,8 @@ local function ESZKON_fake_script() -- Frame_2.LocalScript
 		script.Parent:Destroy()
 	end)
 end
-coroutine.wrap(ESZKON_fake_script)()
-local function LDBQF_fake_script() -- Frame_2.Draggable 
+coroutine.wrap(AKEDT_fake_script)()
+local function BJRM_fake_script() -- Frame_2.Draggable 
 	local script = Instance.new('LocalScript', Frame_2)
 
 	--Not made by me, check out this video: https://www.youtube.com/watch?v=z25nyNBG7Js&t=22s
@@ -496,6 +496,4 @@ local function LDBQF_fake_script() -- Frame_2.Draggable
 	end)
 	
 end
-coroutine.wrap(LDBQF_fake_script)()
-
-
+coroutine.wrap(BJRM_fake_script)()
