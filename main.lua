@@ -280,7 +280,7 @@ TextButton.TextSize = 24.000
 
 -- Scripts:
 
-local function DBWFCHD_fake_script() -- Roundify.Handler 
+local function PFPEI_fake_script() -- Roundify.Handler 
 	local script = Instance.new('LocalScript', Roundify)
 
 	wait(1)
@@ -375,6 +375,8 @@ local function DBWFCHD_fake_script() -- Roundify.Handler
 	
 	tpplrbtn.MouseButton1Click:Connect(tptoplr)
 	
+	rjbtn.MouseButton1Click:Connect(rejoin)
+	
 	--//
 	-- COMMANDS
 	--//
@@ -398,8 +400,8 @@ local function DBWFCHD_fake_script() -- Roundify.Handler
 		Text = "loaded!";
 	})
 end
-coroutine.wrap(DBWFCHD_fake_script)()
-local function JJKV_fake_script() -- Frame.Draggable 
+coroutine.wrap(PFPEI_fake_script)()
+local function INUPC_fake_script() -- Frame.Draggable 
 	local script = Instance.new('LocalScript', Frame)
 
 	--Not made by me, check out this video: https://www.youtube.com/watch?v=z25nyNBG7Js&t=22s
@@ -442,8 +444,8 @@ local function JJKV_fake_script() -- Frame.Draggable
 	end)
 	
 end
-coroutine.wrap(JJKV_fake_script)()
-local function AKEDT_fake_script() -- Frame_2.LocalScript 
+coroutine.wrap(INUPC_fake_script)()
+local function OASGGWS_fake_script() -- Frame_2.LocalScript 
 	local script = Instance.new('LocalScript', Frame_2)
 
 	local closebtn = script.Parent.TextButton
@@ -452,8 +454,8 @@ local function AKEDT_fake_script() -- Frame_2.LocalScript
 		script.Parent:Destroy()
 	end)
 end
-coroutine.wrap(AKEDT_fake_script)()
-local function BJRM_fake_script() -- Frame_2.Draggable 
+coroutine.wrap(OASGGWS_fake_script)()
+local function PZML_fake_script() -- Frame_2.Draggable 
 	local script = Instance.new('LocalScript', Frame_2)
 
 	--Not made by me, check out this video: https://www.youtube.com/watch?v=z25nyNBG7Js&t=22s
@@ -496,4 +498,4 @@ local function BJRM_fake_script() -- Frame_2.Draggable
 	end)
 	
 end
-coroutine.wrap(BJRM_fake_script)()
+coroutine.wrap(PZML_fake_script)()
